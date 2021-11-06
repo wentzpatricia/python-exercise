@@ -1,8 +1,3 @@
-"""
-VERSÃO 2
-DISCIPLINA: Algoritmos e Programação I
-Atividade desenvolvida pela aluna Patrícia Wentz de Moraes
-"""
 
 lst_estado = []
 
