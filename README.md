@@ -48,26 +48,10 @@ Esta instância de cidade deverá ser armazenada no atributo lst_cidades da clas
 Estado.
 
 Na opção 3, você deverá gerar um relatório com o nome do estado e a quantidade de casos
-registrados. Segue um exemplo deste relatório.
-=-=-=-=-=- Relatório do Estados:
---> RIO GRANDE DO SUL............. - total de Casos: 52
---> SANTA CATARINA................ - total de Casos: 7
---> PARANA........................ - total de Casos: 0
---> SÃO PAULO..................... - total de Casos: 34
---> RIO DE JANEIRO................ - total de Casos: 31
- [Enter] Retorna ao menu.
+registrados. 
 
 Na opção 4, você deverá gerar um relatório com o nome da cidade, e a quantidade de casos
-registrados. Segue um exemplo deste relatório.
-=-=-=-=-=- Relatório do Cidades:
---> SANTA MARIA......... - Casos Registrados: 11
---> PORTO ALEGRE........ - Casos Registrados: 33
---> CANOAS.............. - Casos Registrados: 8
---> FLORIANÓPOLIS....... - Casos Registrados: 7
---> RIO DE JANEIRO...... - Casos Registrados: 23
---> NITEROI............. - Casos Registrados: 8
---> SAO PAULO........... - Casos Registrados: 34
- [Enter] Retorna ao menu.
+registrados. 
  
 Na opção 5, você deverá atualizar os casos na cidade, escolhendo uma das cidades e
 digitando a nova quantidade de casos detectada. Esta quantidade deverá sempre ser
