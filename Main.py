@@ -1,9 +1,9 @@
 from Menu import menu_principal
-from exercise import cadastrar_cidade
-from exercise import cadastrar_estado
-from exercise import relatorio_estados
-from exercise import relatorio_cidades
-from exercise import atualiza_casos
+from Service import cadastrar_cidade
+from Service import cadastrar_estado
+from Service import relatorio_estados
+from Service import relatorio_cidades
+from Service import atualiza_casos
 
 while True:
     teclado = menu_principal()
