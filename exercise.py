@@ -1,6 +1,4 @@
-
 lst_estado = []
-
 class Estado:
     def __init__(self, nome_estado, sigla):
         self.__nome = nome_estado
@@ -142,30 +140,5 @@ def atualiza_casos():
                                     input("\b\033[1;31mErro.\033[0;0m Insira somente números maiores que 0. [Enter]")
                                     continue
                 else: input("\n\033[1;31mErro.\033[0;0m Cidade não encontrada[Enter]")
-    else:input("\n\033[1;31mErro.\033[0;0m UF não encontrado[Enter]")
-                
-def menu_principal():
-    return input(("\n"*4)+"""\033[1;34m
- ====================================
- ------------------------------------\033[0;0m 
-                MENU\033[1;34m
- ------------------------------------\033[0;0m
-    0- Finalizar o Programa
-    1- Cadastrar Estados
-    2- Cadastrar Cidades
-    3- Relatório de Estados
-    4- Relatório de Cidades
-    5- Atualizar números de casos \033[1;34m
- ------------------------------------
- ====================================\033[0;0m
-    Escolha: """)
-
-while True:
-    teclado = menu_principal()
-    if teclado == "0": break
-    elif teclado == "1": cadastrar_estado()
-    elif teclado == "2": cadastrar_cidade()
-    elif teclado == "3": relatorio_estados()
-    elif teclado == "4": relatorio_cidades()
-    elif teclado == "5": atualiza_casos()
+    else:input("\n\033[1;31mErro.\033[0;0m UF não encontrado[Enter]")              
 
