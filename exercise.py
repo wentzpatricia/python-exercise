@@ -1,7 +1,6 @@
 
 lst_estado = []
 
-#classe estado -------------------------------------------
 class Estado:
     def __init__(self, nome_estado, sigla):
         self.__nome = nome_estado
@@ -41,7 +40,6 @@ class Estado:
     def __str__(self):
         return f"{self.__nome}({self.__sigla}).... {self.__qtd_casos_estado}"
 
-# classe cidades -----------------------------------------
 class Cidade:
     def __init__(self, nome_cidade):
         self.__cidade = nome_cidade
@@ -59,12 +57,10 @@ class Cidade:
     def __str__(self):
         return f"{self.get_cidade()}|{self.__cidade} {self.__qtd_casos_cidade}"
    
-# relatorio cidades -------------------------------------
 def relatorio_cidades():
     mostra_estados()
     mostra_cidades()
 
-# mostra cidades ----------------------------------------
 def mostra_cidades():
     sigla = input("Informe a UF do Estado: ").upper()
     if verifica_sigla(sigla)== True:
@@ -73,14 +69,12 @@ def mostra_cidades():
                 estado.imprime_cidades()
     else: input("\n\033[1;31mErro. UF não encontrada [Enter]\033[0;0m")  
 
-# verifica sigla -------------------------------------------
 def verifica_sigla(sigla):
     for estado in lst_estado:
         if estado.get_sigla() == sigla:
             return True
     return False
 
-# cadastrar cidades -------------------------------------
 def cadastrar_cidade():
     mostra_estados()
     sigla = input("Informe a UF do Estado: ").upper()
@@ -95,11 +89,9 @@ def cadastrar_cidade():
                     estado.set_lista_cidade(cidade)
     else: input("\n\033[1;31mErro.\033[0;0m UF não encontrada [Enter]")
 
-# relatorio estados -------------------------------------
 def relatorio_estados():
     mostra_estados()
 
-# mostra estados ----------------------------------------
 def mostra_estados():
     if len(lst_estado) == 0:
         print("\nAinda não foram adicionados estados.\n")
@@ -109,13 +101,12 @@ def mostra_estados():
             print(f"\033[1;36m-->\033[0;0m {estado.get_estado().ljust(25)}({estado.get_sigla()})\033[1;36m|\033[0;0m Total de Casos: {estado.get_qtd_casos_estado()}")
         print("\n"*2)
 
-# verifica estados -------------------------------------
 def verifica_estado(nome_estado):
     for estado in lst_estado:
         if estado.get_estado() == nome_estado:
             return True
     return False
-# cadastrar estados -------------------------------------
+
 def cadastrar_estado():
     mostra_estados()
     
@@ -153,7 +144,6 @@ def atualiza_casos():
                 else: input("\n\033[1;31mErro.\033[0;0m Cidade não encontrada[Enter]")
     else:input("\n\033[1;31mErro.\033[0;0m UF não encontrado[Enter]")
                 
-# menu ---------------------------------------------------
 def menu_principal():
     return input(("\n"*4)+"""\033[1;34m
  ====================================
