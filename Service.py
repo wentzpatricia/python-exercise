@@ -31,7 +31,7 @@ def cadastrar_cidade():
                 if estado.verifica_cidade(obj_cidade) == True:
                     input("\n\033[1;31mErro.\033[0;0m Cidade já cadastrada. [Enter]")
                 else:
-                    cidade = Cidade(obj_cidade)
+                    cidade = City(obj_cidade)
                     estado.set_lista_cidade(cidade)
     else: input("\n\033[1;31mErro.\033[0;0m UF não encontrada [Enter]")
 
@@ -60,7 +60,7 @@ def cadastrar_estado():
     if verifica_estado(obj_estado) == False:
         sigla = input("Qual a UF deste estado? ").upper()
         if verifica_sigla(sigla) == False:
-            estado = Estado(obj_estado, sigla)
+            estado = State(obj_estado, sigla)
             lst_estado.append(estado)
         else: input("\n\033[1;31mErro.\033[0;0m UF já adicionado. [Enter]")
     else: input("\n\033[1;31mErro.\033[0;0m Estado já adicionado na lista de registros. [Enter]")
