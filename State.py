@@ -3,43 +3,43 @@ from Color import Color
 
 color = Color()
 class State:
-    def __init__(self, nome_estado, sigla):
-        self.__nome = nome_estado
-        self.__sigla = sigla
-        self.__lst_cidades = []
-        self.__qtd_casos_estado = 0
+    def __init__(self, nameState, initials):
+        self.__name = nameState
+        self.__initials = initials
+        self.__listCity = []
+        self.__qtdCasesState = 0
     
-    def get_sigla(self):
-        return self.__sigla
+    def getInitials(self):
+        return self.__initials
 
-    def get_estado(self):
-        return self.__nome
+    def getState(self):
+        return self.__name
 
-    def get_lista_cidade(self):
-        return self.__lst_cidades
+    def getListCity(self):
+        return self.__listCity
 
-    def set_lista_cidade(self, cidade):
-        self.__lst_cidades.append(cidade)
+    def setListCity(self, city):
+        self.__listCity.append(city)
 
-    def imprime_cidades(self):
+    def printCity(self):
         print(f"\n{color.cyan}=-=-=-=-=- Relatório de cidades =-=-=-=-=-=-{color.endColor}")
-        for cidade in self.__lst_cidades:
-           print(f"{color.cyan}--->{color.endColor} {cidade.get_cidade().ljust(15)}{color.cyan}|{color.endColor} Casos registrados: {cidade.get_qtd_casos_cidade()}")
+        for city in self.__listCity:
+           print(f"{color.cyan}--->{color.endColor} {city.getCity().ljust(15)}{color.cyan}|{color.endColor} Casos registrados: {city.getQtdCasesCity()}")
            print("")
-    def verifica_cidade(self, nome_cidade):
-        for cidade in self.__lst_cidades:
-            if cidade.get_cidade() == nome_cidade:
+    def verifyCity(self, nameCity):
+        for city in self.__listCity:
+            if city.getCity() == name_cidade:
                 return True
             else: (f"{color.red}Erro.{color.endColor} Cidade não encontrada. [Enter]")
 
-    def set_qtd_casos_estado(self, qt_deCasos):
-        self.__qtd_casos_estado += qt_deCasos
+    def setQtdCasesState(self, qtCases):
+        self.__qtdCasesState += qtCases
 
-    def get_qtd_casos_estado(self):
-        return self.__qtd_casos_estado
+    def get_qtdCasesState(self):
+        return self.__qtdCasesState
 
     def __str__(self):
-        return f"{self.__nome}({self.__sigla}).... {self.__qtd_casos_estado}"
+        return f"{self.__name}({self.__initials}).... {self.__qtdCasesState}"
 
 
          

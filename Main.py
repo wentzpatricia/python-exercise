@@ -1,15 +1,15 @@
 from Menu import menu_principal
-from Service import cadastrar_cidade
-from Service import cadastrar_estado
-from Service import relatorio_estados
-from Service import relatorio_cidades
-from Service import atualiza_casos
+from Service import registerCity
+from Service import registerState
+from Service import reportCity
+from Service import reportState
+from Service import updateCases
 
 while True:
     teclado = menu_principal()
     if teclado == "0": break
-    elif teclado == "1": cadastrar_estado()
-    elif teclado == "2": cadastrar_cidade()
-    elif teclado == "3": relatorio_estados()
-    elif teclado == "4": relatorio_cidades()
-    elif teclado == "5": atualiza_casos()
+    elif teclado == "1": registerState()
+    elif teclado == "2": registerCity()
+    elif teclado == "3": reportState()
+    elif teclado == "4": reportCity()
+    elif teclado == "5": updateCases()
