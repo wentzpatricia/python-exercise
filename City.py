@@ -1,16 +1,16 @@
 class City:
-    def __init__(self, nome_cidade):
-        self.__cidade = nome_cidade
-        self.__qtd_casos_cidade = 0
+    def __init__(self, nameCity):
+        self.__city = nameCity
+        self.__qtdCasesCity = 0
 
-    def get_cidade(self):
-        return self.__cidade
+    def getCity(self):
+        return self.__city
 
-    def set_qtd_casos_cidade(self, qt_deCasos_cidades):
-        self.__qtd_casos_cidade += qt_deCasos_cidades
+    def setQtdCasesCity(self, qtCity):
+        self.__qtdCasesCity += qtCity
     
-    def get_qtd_casos_cidade(self):
-        return self.__qtd_casos_cidade
+    def getQtdCasesCity(self):
+        return self.__qtdCasesCity
 
     def __str__(self):
-        return f"{self.get_cidade()}|{self.__cidade} {self.__qtd_casos_cidade}"
+        return f"{self.getCity()()}|{self.__city} {self.__qtdCasesCity}"

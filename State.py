@@ -9,7 +9,7 @@ class State:
         self.__listCity = []
         self.__qtdCasesState = 0
     
-    def getInitials(self):
+    def getInitialsState(self):
         return self.__initials
 
     def getState(self):
@@ -28,14 +28,14 @@ class State:
            print("")
     def verifyCity(self, nameCity):
         for city in self.__listCity:
-            if city.getCity() == name_cidade:
+            if city.getCity() == nameCity:
                 return True
             else: (f"{color.red}Erro.{color.endColor} Cidade não encontrada. [Enter]")
 
     def setQtdCasesState(self, qtCases):
         self.__qtdCasesState += qtCases
 
-    def get_qtdCasesState(self):
+    def getQtdCasesState(self):
         return self.__qtdCasesState
 
     def __str__(self):
