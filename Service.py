@@ -1,6 +1,8 @@
 from City import City
 from State import State
+from Color import Color
 
+color = Color()
 lst_estado = []
 
 def relatorio_cidades():
@@ -13,7 +15,7 @@ def mostra_cidades():
         for estado in lst_estado:
             if estado.get_sigla() == sigla:
                 estado.imprime_cidades()
-    else: input("\n\033[1;31mErro. UF não encontrada [Enter]\033[0;0m")  
+    else: input(f"\n{color.red}Erro.{color.endColor} UF não encontrada [Enter]")  
 
 def verifica_sigla(sigla):
     for estado in lst_estado:
@@ -29,11 +31,11 @@ def cadastrar_cidade():
             if estado.get_sigla() == sigla:
                 obj_cidade = input("Qual cidade você gostaria de adicionar? ").upper()
                 if estado.verifica_cidade(obj_cidade) == True:
-                    input("\n\033[1;31mErro.\033[0;0m Cidade já cadastrada. [Enter]")
+                    input(f"\n{color.red}Erro.{color.endColor} Cidade já cadastrada. [Enter]")
                 else:
                     cidade = City(obj_cidade)
                     estado.set_lista_cidade(cidade)
-    else: input("\n\033[1;31mErro.\033[0;0m UF não encontrada [Enter]")
+    else: input(f"\n{color.red}Erro.{color.endColor} UF não encontrada [Enter]")
 
 def relatorio_estados():
     mostra_estados()
@@ -42,9 +44,9 @@ def mostra_estados():
     if len(lst_estado) == 0:
         print("\nAinda não foram adicionados estados.\n")
     else:
-        print("\n","\033[1;36m=-"*6," Relatório de Estados:","=-"*6,"\033[0;0m\n")
+        print(f"\n {color.cyan}=-=-=-=-=-=-=- Relatório de Estados =-=-=-=-=-=-=-{color.endColor}\n")
         for estado in lst_estado:
-            print(f"\033[1;36m-->\033[0;0m {estado.get_estado().ljust(25)}({estado.get_sigla()})\033[1;36m|\033[0;0m Total de Casos: {estado.get_qtd_casos_estado()}")
+            print(f"{color.cyan}-->{color.endColor} {estado.get_estado().ljust(25)}({estado.get_sigla()}){color.cyan}|{color.endColor} Total de Casos: {estado.get_qtd_casos_estado()}")
         print("\n"*2)
 
 def verifica_estado(nome_estado):
@@ -62,8 +64,8 @@ def cadastrar_estado():
         if verifica_sigla(sigla) == False:
             estado = State(obj_estado, sigla)
             lst_estado.append(estado)
-        else: input("\n\033[1;31mErro.\033[0;0m UF já adicionado. [Enter]")
-    else: input("\n\033[1;31mErro.\033[0;0m Estado já adicionado na lista de registros. [Enter]")
+        else: input(f"\n{color.red}Erro.{color.endColor} UF já adicionado. [Enter]")
+    else: input(f"\n{color.red}Erro.{color.endColor} Estado já adicionado na lista de registros. [Enter]")
 
 def atualiza_casos():
     mostra_estados()
@@ -85,7 +87,7 @@ def atualiza_casos():
                                     estado.set_qtd_casos_estado(casos)
                                     break
                                 else: 
-                                    input("\b\033[1;31mErro.\033[0;0m Insira somente números maiores que 0. [Enter]")
+                                    input(f"\b{color.red}Erro.{color.endColor} Insira somente números maiores que 0. [Enter]")
                                     continue
-                else: input("\n\033[1;31mErro.\033[0;0m Cidade não encontrada[Enter]")
-    else:input("\n\033[1;31mErro.\033[0;0m UF não encontrado[Enter]")     
+                else: input(f"\n{color.red}Erro.{color.endColor} Cidade não encontrada[Enter]")
+    else:input(f"\n{color.red}Erro.{color.endColor} UF não encontrado[Enter]")     
